@@ -1,10 +1,6 @@
 import { useState } from "react";
-import { X, Copy, Check, Upload, AlertCircle } from "lucide-react";
+import { X, Copy, Check, AlertCircle, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
-import { useNavigate } from "react-router-dom";
 
 interface Plan {
   id: string;
@@ -20,15 +16,7 @@ interface TransferModalProps {
 }
 
 const TransferModal = ({ isOpen, onClose, plan }: TransferModalProps) => {
-  const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    whatsapp: "",
-    confirmed: false,
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const bankDetails = {
     bank: "Banco Inbursa",
@@ -36,25 +24,17 @@ const TransferModal = ({ isOpen, onClose, plan }: TransferModalProps) => {
     clabe: "036180500287429021",
   };
 
+  const whatsappNumber = "5218181132483";
+  const whatsappMessage = encodeURIComponent(
+    "Hola, ya hice mi transferencia para el workshop.\nMi nombre es ____."
+  );
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
   const copyToClipboard = async () => {
     await navigator.clipboard.writeText(bankDetails.clabe);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitting(false);
-    onClose();
-    navigate("/bienvenido?metodo=transferencia");
-  };
-
-  const isFormValid = formData.name && formData.email && formData.whatsapp && formData.confirmed;
 
   if (!isOpen || !plan) return null;
 
@@ -111,100 +91,52 @@ const TransferModal = ({ isOpen, onClose, plan }: TransferModalProps) => {
                 </button>
               </div>
               <div>
-                <span className="text-text-muted">Concepto:</span>
-                <span className="text-foreground ml-2">Workshop FH + [Tu nombre]</span>
+                <span className="text-text-muted">Concepto o referencia:</span>
+                <span className="text-foreground ml-2">Tu nombre completo</span>
               </div>
             </div>
 
             <div className="mt-4 p-3 bg-gold/10 rounded border border-gold/20 flex items-start gap-2">
               <AlertCircle className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
               <p className="text-gold text-xs">
-                Importante: Incluye tu nombre en el concepto
+                Importante: Incluye tu nombre completo en el concepto
               </p>
             </div>
           </div>
 
-          {/* Form */}
-          <form onSubmit={handleSubmit}>
-            <p className="text-text-secondary text-sm mb-4">
-              Una vez realizada la transferencia, confirma tu pago:
+          {/* Instructions */}
+          <div className="mb-6">
+            <p className="text-foreground font-medium mb-4">
+              Una vez realizada la transferencia:
             </p>
-
-            <div className="space-y-4">
-              <div>
-                <Label htmlFor="name" className="text-foreground">Nombre completo *</Label>
-                <Input
-                  id="name"
-                  type="text"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="mt-1 bg-background border-border focus:border-gold focus:ring-gold"
-                  required
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="email" className="text-foreground">Email *</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="mt-1 bg-background border-border focus:border-gold focus:ring-gold"
-                  required
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="whatsapp" className="text-foreground">WhatsApp *</Label>
-                <Input
-                  id="whatsapp"
-                  type="tel"
-                  value={formData.whatsapp}
-                  onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                  className="mt-1 bg-background border-border focus:border-gold focus:ring-gold"
-                  placeholder="+52 55 1234 5678"
-                  required
-                />
-              </div>
-
-              <div>
-                <Label className="text-foreground">Comprobante de pago (opcional)</Label>
-                <div className="mt-1 border border-dashed border-border rounded-lg p-4 text-center hover:border-gold/50 transition-colors cursor-pointer">
-                  <Upload className="w-6 h-6 text-text-muted mx-auto mb-2" />
-                  <p className="text-text-muted text-sm">Subir archivo</p>
-                </div>
-              </div>
-
+            
+            <div className="space-y-3 text-sm">
               <div className="flex items-start gap-3">
-                <Checkbox
-                  id="confirmed"
-                  checked={formData.confirmed}
-                  onCheckedChange={(checked) => 
-                    setFormData({ ...formData, confirmed: checked as boolean })
-                  }
-                  className="mt-0.5 border-gold data-[state=checked]:bg-gold data-[state=checked]:text-primary-foreground"
-                />
-                <Label htmlFor="confirmed" className="text-foreground text-sm cursor-pointer">
-                  Confirmo que ya realicé la transferencia
-                </Label>
+                <span className="text-lg">1️⃣</span>
+                <span className="text-text-secondary">Toma captura de tu comprobante</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-lg">2️⃣</span>
+                <span className="text-text-secondary">Envíalo por WhatsApp a:</span>
               </div>
             </div>
+          </div>
 
+          {/* WhatsApp Button */}
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
             <Button
-              type="submit"
               variant="gold"
               size="lg"
-              className="w-full mt-6"
-              disabled={!isFormValid || isSubmitting}
+              className="w-full"
             >
-              {isSubmitting ? "Enviando..." : "Confirmar mi inscripción"}
+              <MessageCircle className="w-5 h-5" />
+              Enviar comprobante por WhatsApp
             </Button>
+          </a>
 
-            <p className="text-text-muted text-xs text-center mt-4">
-              Recibirás confirmación por email en menos de 24 horas
-            </p>
-          </form>
+          <p className="text-text-muted text-xs text-center mt-4">
+            Recibirás confirmación por WhatsApp en menos de 24 horas
+          </p>
         </div>
       </div>
     </div>
