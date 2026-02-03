@@ -3,6 +3,7 @@ import ProblemSection from "@/components/landing/ProblemSection";
 import ShiftSection from "@/components/landing/ShiftSection";
 import ContentSection from "@/components/landing/ContentSection";
 import ResultsSection from "@/components/landing/ResultsSection";
+import FacilitatorsSection from "@/components/landing/FacilitatorsSection";
 import AudienceSection from "@/components/landing/AudienceSection";
 import PricingPreviewSection from "@/components/landing/PricingPreviewSection";
 import FinalCTASection from "@/components/landing/FinalCTASection";
@@ -17,6 +18,7 @@ const Index = () => {
       <ShiftSection />
       <ContentSection />
       <ResultsSection />
+      <FacilitatorsSection />
       <AudienceSection />
       <PricingPreviewSection />
       <FinalCTASection />
