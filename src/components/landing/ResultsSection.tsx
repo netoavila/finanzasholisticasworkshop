@@ -1,31 +1,21 @@
-import { Brain, Search, Rocket, CheckCircle, Map } from "lucide-react";
+import { Lightbulb, Rocket, Map } from "lucide-react";
 
 const ResultsSection = () => {
   const results = [
     {
-      icon: Brain,
-      title: "Entendimiento",
-      description: "Sabrás qué es lo que te dispara la ansiedad financiera y cómo regularlo",
-    },
-    {
-      icon: Search,
-      title: "Más claridad",
-      description: "Certeza del tipo de inversionista que ya eres y como sacarle provecho",
+      icon: Lightbulb,
+      title: "Claridad",
+      description: "Entendimiento del tipo de inversionista que eres y cómo sacarle provecho",
     },
     {
       icon: Rocket,
       title: "No más parálisis",
-      description: "Liberación de patrones limitantes hacia el dinero",
-    },
-    {
-      icon: CheckCircle,
-      title: "Confianza para elegir",
-      description: "2–3 instrumentos del mercado alineados a ti (para tu etapa actual)",
+      description: "Entiende qué te frena y cómo desbloquearte para actuar",
     },
     {
       icon: Map,
       title: "Mapa simple de decisión",
-      description: "Tu siguiente paso sin ruido y sin culpas",
+      description: "2–3 instrumentos alineados a ti para dar el siguiente paso sin ruido ni culpas",
     },
   ];
 
