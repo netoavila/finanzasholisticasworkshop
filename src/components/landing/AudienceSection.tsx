@@ -1,4 +1,5 @@
 import { Check, X } from "lucide-react";
+import mistyLandscapeBg from "@/assets/backgrounds/misty-landscape.png";
 
 const AudienceSection = () => {
   const forWhom = [
@@ -14,14 +15,27 @@ const AudienceSection = () => {
   ];
 
   return (
-    <section 
-      className="section-padding"
-      style={{ backgroundColor: '#111214' }}
-    >
-      <div className="container-narrow">
+    <section className="section-padding relative overflow-hidden">
+      {/* Background image with blur */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `url(${mistyLandscapeBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          filter: 'blur(3px)',
+        }}
+      />
+      {/* Dark overlay 80% */}
+      <div 
+        className="absolute inset-0"
+        style={{ backgroundColor: 'rgba(0, 0, 0, 0.80)' }}
+      />
+      
+      <div className="container-narrow relative z-10">
         <div className="grid md:grid-cols-2 gap-8">
           {/* For whom */}
-          <div className="bg-card border border-gold/20 rounded-lg p-8">
+          <div className="bg-card/90 backdrop-blur-sm border border-gold/20 rounded-lg p-8">
             <h3 className="text-h3 font-serif text-foreground mb-6">Para quién sí</h3>
             <div className="space-y-4">
               {forWhom.map((item, index) => (
@@ -34,7 +48,7 @@ const AudienceSection = () => {
           </div>
 
           {/* Not for */}
-          <div className="bg-card border border-border rounded-lg p-8">
+          <div className="bg-card/90 backdrop-blur-sm border border-border rounded-lg p-8">
             <h3 className="text-h3 font-serif text-foreground mb-6">Para quién no</h3>
             <div className="space-y-4">
               {notFor.map((item, index) => (

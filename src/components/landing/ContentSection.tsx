@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import editorialDeskBg from "@/assets/backgrounds/editorial-desk.jpg";
 
 const ContentSection = () => {
   const content = [
@@ -11,13 +12,24 @@ const ContentSection = () => {
   ];
 
   return (
-    <section 
-      className="section-padding"
-      style={{
-        background: "linear-gradient(180deg, #111214 0%, #0F1011 100%)"
-      }}
-    >
-      <div className="container-narrow">
+    <section className="section-padding relative overflow-hidden">
+      {/* Background image with blur */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `url(${editorialDeskBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          filter: 'blur(2px)',
+        }}
+      />
+      {/* Dark overlay 75% */}
+      <div 
+        className="absolute inset-0"
+        style={{ backgroundColor: 'rgba(0, 0, 0, 0.75)' }}
+      />
+      
+      <div className="container-narrow relative z-10">
         <h2 className="text-h2 font-serif text-foreground text-center mb-12">
           Lo técnico, lo emocional y lo práctico.<br className="hidden md:block" /> En un solo lugar.
         </h2>
