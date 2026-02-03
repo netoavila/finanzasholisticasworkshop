@@ -160,8 +160,17 @@ const ElegirPlan = () => {
           </div>
           <div className="flex items-center gap-2">
             <MessageCircle className="w-4 h-4" />
-            <span>Dudas: hola@finanzasholisticas.com</span>
+            <span>Dudas: gestion@destresa.mx</span>
           </div>
+          <a 
+            href="https://wa.me/5218181132483" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-foreground transition-colors"
+          >
+            <MessageCircle className="w-4 h-4" />
+            <span>WhatsApp: +52 1 81 8113 2483</span>
+          </a>
         </div>
       </div>
 
