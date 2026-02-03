@@ -11,7 +11,10 @@ const ProblemSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-background">
+    <section 
+      className="section-padding"
+      style={{ backgroundColor: '#0B0B0C' }}
+    >
       <div className="container-narrow">
         <h2 className="text-h2 font-serif text-foreground text-center mb-6">
           Si estás esperando "el momento perfecto"…<br className="hidden md:block" /> probablemente vas a seguir esperando.

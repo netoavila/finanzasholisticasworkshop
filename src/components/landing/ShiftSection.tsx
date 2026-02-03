@@ -3,7 +3,7 @@ const ShiftSection = () => {
     <section 
       className="section-padding"
       style={{
-        background: "linear-gradient(180deg, hsl(0 0% 5%) 0%, hsl(0 0% 8%) 100%)"
+        background: "linear-gradient(180deg, #111214 0%, #0F1011 100%)"
       }}
     >
       <div className="container-narrow text-center">

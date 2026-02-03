@@ -14,7 +14,10 @@ const AudienceSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-background-secondary">
+    <section 
+      className="section-padding"
+      style={{ backgroundColor: '#111214' }}
+    >
       <div className="container-narrow">
         <div className="grid md:grid-cols-2 gap-8">
           {/* For whom */}

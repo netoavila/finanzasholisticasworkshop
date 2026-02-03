@@ -11,7 +11,12 @@ const ContentSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-background-secondary">
+    <section 
+      className="section-padding"
+      style={{
+        background: "linear-gradient(180deg, #111214 0%, #0F1011 100%)"
+      }}
+    >
       <div className="container-narrow">
         <h2 className="text-h2 font-serif text-foreground text-center mb-12">
           Lo técnico, lo emocional y lo práctico.<br className="hidden md:block" /> En un solo lugar.

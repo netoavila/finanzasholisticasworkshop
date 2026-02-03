@@ -42,7 +42,10 @@ const PricingPreviewSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-background">
+    <section 
+      className="section-padding"
+      style={{ backgroundColor: '#0B0B0C' }}
+    >
       <div className="container-narrow">
         <h2 className="text-h2 font-serif text-foreground text-center mb-12">
           Elige tu nivel de profundidad
