@@ -29,7 +29,7 @@ const FacilitatorsSection = () => {
         </h2>
         
         <p className="text-text-secondary text-center max-w-2xl mx-auto mb-12">
-          Un equipo que integra lo emocional/personal con lo financiero/técnico: claridad interna + decisiones reales.
+          Un equipo que integra de forma equilibrada lo emocional con lo técnico
         </p>
 
         <div className="grid md:grid-cols-3 gap-8">
