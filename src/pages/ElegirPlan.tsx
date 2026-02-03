@@ -30,7 +30,7 @@ const plans: Plan[] = [
       "7 días de repetición (replay)",
     ],
     featured: false,
-    stripeLink: "https://buy.stripe.com/XXXXXX_esencial",
+    stripeLink: "https://buy.stripe.com/3cIfZjgfd5gXeMD11v7Zu0l",
   },
   {
     id: "expansion",
@@ -45,7 +45,7 @@ const plans: Plan[] = [
       "Audioguía para reprogramar creencias limitantes",
     ],
     featured: true,
-    stripeLink: "https://buy.stripe.com/XXXXXX_expansion",
+    stripeLink: "https://buy.stripe.com/8x214pgfddNtfQHeSl7Zu0k",
   },
   {
     id: "transformacion",
@@ -60,7 +60,7 @@ const plans: Plan[] = [
       "Sorteo de una sesión 1:1 para seguimiento personalizado",
     ],
     featured: false,
-    stripeLink: "https://buy.stripe.com/XXXXXX_transformacion",
+    stripeLink: "https://buy.stripe.com/cNifZj2on24LcEveSl7Zu0j",
   },
 ];
 

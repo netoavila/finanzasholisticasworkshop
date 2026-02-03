@@ -31,9 +31,9 @@ const TransferModal = ({ isOpen, onClose, plan }: TransferModalProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const bankDetails = {
-    bank: "BBVA México",
-    holder: "Finanzas Holísticas S.A. de C.V.",
-    clabe: "012180001234567890",
+    bank: "Banco Inbursa",
+    holder: "Mirada Films S de RL de CV",
+    clabe: "036180500287429021",
   };
 
   const copyToClipboard = async () => {
