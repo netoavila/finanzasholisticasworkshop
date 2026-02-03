@@ -44,6 +44,7 @@ const FacilitatorsSection = () => {
                   src={facilitator.photo}
                   alt={facilitator.name}
                   className="w-24 h-24 rounded-full object-cover border-2 border-gold/30"
+                  style={facilitator.name === "Neto Ávila" ? { objectPosition: "center 20%" } : undefined}
                 />
               </div>
 
