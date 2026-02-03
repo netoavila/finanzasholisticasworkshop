@@ -5,7 +5,7 @@ const ResultsSection = () => {
     {
       icon: Brain,
       title: "Entendimiento",
-      description: "Sabrás que es lo que te dispara la ansiedad financiera y cómo regularlo",
+      description: "Sabrás qué es lo que te dispara la ansiedad financiera y cómo regularlo",
     },
     {
       icon: Search,
@@ -36,7 +36,7 @@ const ResultsSection = () => {
           Lo que te llevas:
         </h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {results.map((result, index) => (
             <div key={index} className="text-center">
               <div className="w-14 h-14 mx-auto mb-4 rounded-full border-[1.5px] border-gold flex items-center justify-center">
