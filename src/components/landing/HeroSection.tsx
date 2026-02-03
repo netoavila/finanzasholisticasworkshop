@@ -1,17 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, MapPin, Check } from "lucide-react";
+import { Calendar, Clock, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.png";
 
 const HeroSection = () => {
-  const benefits = [
-    "Identificas tu patrón (arquetipo financiero) y por qué te sabotea.",
-    "Reprogramas creencias que te han impedido accionar con claridad y confianza",
-    "Aprendes a comparar opciones con el método RLR (Rendimiento–Liquidez–Riesgo).",
-    "Te posicionas en tu realidad financiera mediante la Escalera del inversionista.",
-    "Sales entendiendo 2–3 instrumentos alineados a tu perfil + el siguiente paso claro.",
-  ];
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -32,7 +24,7 @@ const HeroSection = () => {
       <div className="relative z-10 container-narrow text-center py-20 px-6">
         {/* Headline */}
         <h1 className="text-h1 font-serif text-foreground max-w-4xl mx-auto mb-6 animate-fade-in-up">
-          Aprende a invertir tu dinero con claridad y confianza, sin tener que convertirte en una persona experta en finanzas
+          Deja de postergar tu futuro financiero
         </h1>
 
         {/* Subheadline */}
@@ -65,20 +57,10 @@ const HeroSection = () => {
 
         {/* CTA Button */}
         <Link to="/elegir-plan">
-          <Button variant="gold" size="xl" className="mb-12">
-            Quiero Expansión Financiera
+          <Button variant="gold" size="xl">
+            Reservar mi lugar
           </Button>
         </Link>
-
-        {/* Benefit bullets */}
-        <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto text-left">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="flex items-start gap-3">
-              <Check className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-              <span className="text-foreground text-sm">{benefit}</span>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
