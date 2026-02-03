@@ -18,7 +18,7 @@ const FinalCTASection = () => {
       {/* Content */}
       <div className="relative z-10 container-narrow text-center">
         <h2 className="text-h2 font-serif text-foreground mb-4">
-          Es momento de dar el paso
+          La claridad que buscas está a 6 horas de distancia
         </h2>
         
         <p className="text-text-secondary text-lg mb-8">
@@ -27,7 +27,7 @@ const FinalCTASection = () => {
 
         <Link to="/elegir-plan">
           <Button variant="gold" size="xl" className="mb-6">
-            Quiero Expansión Financiera
+            Reservar mi lugar
           </Button>
         </Link>
 
