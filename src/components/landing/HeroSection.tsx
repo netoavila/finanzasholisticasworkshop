@@ -33,7 +33,7 @@ const HeroSection = () => {
         </p>
 
         {/* Anti-hype */}
-        <div className="flex flex-col items-center gap-1 mb-10 text-text-muted text-sm tracking-wide">
+        <div className="flex flex-col items-center gap-1 mb-10 text-text-secondary text-sm tracking-wide">
           <span>No es trading.</span>
           <span>No es "abundancia mágica".</span>
           <span>Es claridad emocional y financiera aplicada a instrumentos reales.</span>
