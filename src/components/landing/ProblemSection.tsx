@@ -14,7 +14,7 @@ const ProblemSection = () => {
     <section className="section-padding bg-background">
       <div className="container-narrow">
         <h2 className="text-h2 font-serif text-foreground text-center mb-6">
-          Si estás esperando "sentirte listo"…<br className="hidden md:block" /> probablemente vas a seguir esperando.
+          Si estás esperando "el momento perfecto"…<br className="hidden md:block" /> probablemente vas a seguir esperando.
         </h2>
 
         <p className="text-text-secondary text-center max-w-2xl mx-auto mb-12">
