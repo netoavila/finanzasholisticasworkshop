@@ -1,13 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/landing/HeroSection";
+import ProblemSection from "@/components/landing/ProblemSection";
+import ShiftSection from "@/components/landing/ShiftSection";
+import ContentSection from "@/components/landing/ContentSection";
+import ResultsSection from "@/components/landing/ResultsSection";
+import AudienceSection from "@/components/landing/AudienceSection";
+import PricingPreviewSection from "@/components/landing/PricingPreviewSection";
+import FinalCTASection from "@/components/landing/FinalCTASection";
+import StickyCTA from "@/components/landing/StickyCTA";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="pb-20 md:pb-0">
+      <HeroSection />
+      <ProblemSection />
+      <ShiftSection />
+      <ContentSection />
+      <ResultsSection />
+      <AudienceSection />
+      <PricingPreviewSection />
+      <FinalCTASection />
+      <Footer />
+      <StickyCTA />
+    </main>
   );
 };
 
