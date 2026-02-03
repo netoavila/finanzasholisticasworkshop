@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 const ProblemSection = () => {
   const problems = [
@@ -25,7 +25,7 @@ const ProblemSection = () => {
         <div className="max-w-2xl mx-auto space-y-4 mb-12">
           {problems.map((problem, index) => (
             <div key={index} className="flex items-start gap-4">
-              <Check className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
+              <ChevronRight className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
               <span className="text-foreground">{problem}</span>
             </div>
           ))}
