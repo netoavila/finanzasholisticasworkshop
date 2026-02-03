@@ -7,19 +7,36 @@ const PricingPreviewSection = () => {
     {
       name: "Esencial",
       price: "$800 MXN",
-      features: ["Workshop 6h", "Test Arquetipos", "Workbook", "7 días replay"],
+      features: [
+        "Workshop en vivo (6 horas)",
+        "Test para Descubrir tu Arquetipo Financiero",
+        "Workbook descargable",
+        "Acceso a grabación por 7 días"
+      ],
       featured: false,
     },
     {
       name: "Expansión",
       price: "$1,680 MXN",
-      features: ["Todo Esencial +", "Comunidad 30d", "Grabación de por vida", "Guías PDF", "Audioguía"],
+      features: [
+        "Todo lo de \"Esencial\" +",
+        "30 días de Comunidad con los facilitadores",
+        "Grabación workshop de por vida",
+        "Guías de instrumentos financieros (PDF)",
+        "Audioguía para reforzar conceptos"
+      ],
       featured: true,
     },
     {
       name: "Transformación",
       price: "$3,360 MXN",
-      features: ["Todo Expansión +", "Sesión grupal extra", "Análisis ampliado", "Descuento Retiro", "Sorteo 1:1"],
+      features: [
+        "Todo lo de \"Expansión\" +",
+        "Sesión grupal de profundización",
+        "Análisis detallado de tu arquetipo financiero",
+        "Descuento para futuros eventos",
+        "Entra al sorteo: sesión 1:1 con facilitadores"
+      ],
       featured: false,
     },
   ];
@@ -65,7 +82,7 @@ const PricingPreviewSection = () => {
         <div className="text-center">
           <Link to="/elegir-plan">
             <Button variant="gold" size="lg">
-              Ver Planes y Pagar
+              Elegir mi plan
             </Button>
           </Link>
         </div>
