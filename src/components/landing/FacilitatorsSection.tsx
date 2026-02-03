@@ -1,25 +1,23 @@
+import netoPhoto from "@/assets/facilitators/neto-avila.jpg";
+import flaviaPhoto from "@/assets/facilitators/flavia-atencio.jpg";
+import joseLuisPhoto from "@/assets/facilitators/jose-luis-gutierrez.jpg";
+
 const FacilitatorsSection = () => {
   const facilitators = [
     {
       name: "Neto Ávila",
       role: "Facilitador",
-      initial: "N",
-      // TODO: Reemplazar con foto real cuando esté disponible
-      // photo: "/assets/facilitators/neto-avila.jpg"
+      photo: netoPhoto,
     },
     {
       name: "Flavia Atencio",
       role: "Facilitadora",
-      initial: "F",
-      // TODO: Reemplazar con foto real cuando esté disponible
-      // photo: "/assets/facilitators/flavia-atencio.jpg"
+      photo: flaviaPhoto,
     },
     {
       name: "José Luis Gutiérrez",
       role: "Facilitador",
-      initial: "J",
-      // TODO: Reemplazar con foto real cuando esté disponible
-      // photo: "/assets/facilitators/jose-luis-gutierrez.jpg"
+      photo: joseLuisPhoto,
     },
   ];
 
@@ -40,21 +38,13 @@ const FacilitatorsSection = () => {
               key={index}
               className="bg-card border border-gold/20 rounded-lg p-8 shadow-sm"
             >
-              {/* Foto circular o inicial */}
+              {/* Foto circular */}
               <div className="flex justify-center mb-6">
-                {facilitator.photo ? (
-                  <img
-                    src={facilitator.photo}
-                    alt={facilitator.name}
-                    className="w-24 h-24 rounded-full object-cover border-2 border-gold/30"
-                  />
-                ) : (
-                  <div className="w-24 h-24 rounded-full border-2 border-gold/30 flex items-center justify-center bg-background-secondary">
-                    <span className="text-gold text-3xl font-serif">
-                      {facilitator.initial}
-                    </span>
-                  </div>
-                )}
+                <img
+                  src={facilitator.photo}
+                  alt={facilitator.name}
+                  className="w-24 h-24 rounded-full object-cover border-2 border-gold/30"
+                />
               </div>
 
               {/* Nombre y rol */}
@@ -75,4 +65,3 @@ const FacilitatorsSection = () => {
 };
 
 export default FacilitatorsSection;
-
