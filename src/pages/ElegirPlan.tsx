@@ -135,7 +135,7 @@ const ElegirPlan = () => {
                     className={`w-full ${plan.featured ? "" : ""}`}
                   >
                     <CreditCard className="w-4 h-4" />
-                    Pagar con Tarjeta
+                    Pagar con Tarjeta de Crédito
                   </Button>
                 </a>
                 <Button 
