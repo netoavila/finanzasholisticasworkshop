@@ -30,6 +30,7 @@ const FacilitatorsSection = () => {
       name: "José Luis Gutiérrez",
       role: "Procesos emocionales profundos + transformación de creencias",
       photo: joseLuisPhoto,
+      photoPosition: "center 25%",
       bio: [
         "José Luis transitó de contar historias en cine y televisión —con más de dos décadas como guionista, director y showrunner— hacia la facilitación de procesos de transformación profunda, reconociendo que cada persona es autora de su propia historia de sanación.",
         "Su enfoque integra la comprensión de patrones emocionales inconscientes, acompañamiento terapéutico y trabajo de exploración interior, para reprogramar creencias limitantes, especialmente en temas de abundancia y dinero. Actualmente reside en Tepoztlán, donde facilita retiros de transformación."
