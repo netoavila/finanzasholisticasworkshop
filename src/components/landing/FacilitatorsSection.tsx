@@ -20,7 +20,7 @@ const FacilitatorsSection = () => {
       name: "Flavia Atencio",
       role: "Narrativa interna + reescritura de historia con el dinero",
       photo: flaviaPhoto,
-      photoPosition: "center 45%",
+      photoPosition: "center 60%",
       bio: [
         "Con una sólida trayectoria como guionista, Flavia ha explorado por más de una década cómo las historias que contamos —y especialmente las que nos contamos a nosotros mismos— moldean la experiencia de vida, la identidad y la relación con la abundancia.",
         "Hoy integra su mirada narrativa con herramientas terapéuticas y enfoque transpersonal para acompañar procesos de transformación: reescribir la historia personal, transformar creencias limitantes y construir una relación con el dinero alineada con propósito y bienestar integral."
@@ -76,7 +76,7 @@ const FacilitatorsSection = () => {
                     src={facilitator.photo}
                     alt={facilitator.name}
                     className="w-28 h-28 rounded-full object-cover border-2 border-gold/30 mb-4"
-                    style={facilitator.photoPosition ? { objectPosition: facilitator.photoPosition } : undefined}
+                    style={facilitator.photoPosition ? { objectPosition: facilitator.photoPosition, objectFit: 'cover' } : { objectFit: 'cover' }}
                   />
                   <h3 className="text-foreground font-serif text-xl mb-2 text-center md:text-left">
                     {facilitator.name}
