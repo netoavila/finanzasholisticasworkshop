@@ -1,8 +1,6 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, Star, ArrowLeft, CreditCard, Building, Lock, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import TransferModal from "@/components/TransferModal";
 import Footer from "@/components/Footer";
 
 interface Plan {
@@ -13,7 +11,8 @@ interface Plan {
   description: string;
   features: string[];
   featured: boolean;
-  stripeLink: string;
+  transferFormLink: string;
+  creditCardFormLink: string;
 }
 
 const plans: Plan[] = [
@@ -30,7 +29,8 @@ const plans: Plan[] = [
       "7 días de repetición (replay)",
     ],
     featured: false,
-    stripeLink: "https://buy.stripe.com/3cIfZjgfd5gXeMD11v7Zu0l",
+    transferFormLink: "https://forms.gle/A5iYb2gKPqSLYAA56",
+    creditCardFormLink: "https://forms.gle/bVJBSfbTmmqZ9g8o6",
   },
   {
     id: "expansion",
@@ -45,7 +45,8 @@ const plans: Plan[] = [
       "Audioguía para reprogramar creencias limitantes",
     ],
     featured: true,
-    stripeLink: "https://buy.stripe.com/8x214pgfddNtfQHeSl7Zu0k",
+    transferFormLink: "https://forms.gle/5jcRrRVhqvK6DTZ86",
+    creditCardFormLink: "https://forms.gle/Q3T4XhecK8F2XkkD8",
   },
   {
     id: "transformacion",
@@ -60,18 +61,12 @@ const plans: Plan[] = [
       "Sorteo de una sesión 1:1 para seguimiento personalizado",
     ],
     featured: false,
-    stripeLink: "https://buy.stripe.com/cNifZj2on24LcEveSl7Zu0j",
+    transferFormLink: "https://forms.gle/9EhFzUQZMq8dnmDz7",
+    creditCardFormLink: "https://forms.gle/z3jDpMgwQUNoTTmi9",
   },
 ];
 
 const ElegirPlan = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null);
-
-  const handleTransferClick = (plan: Plan) => {
-    setSelectedPlan(plan);
-    setModalOpen(true);
-  };
 
   return (
     <main className="min-h-screen bg-background py-12">
@@ -128,7 +123,7 @@ const ElegirPlan = () => {
               </div>
 
               <div className="space-y-3 mt-auto">
-                <a href={plan.stripeLink} target="_blank" rel="noopener noreferrer">
+                <a href={plan.creditCardFormLink} target="_blank" rel="noopener noreferrer">
                   <Button 
                     variant="gold" 
                     size="lg" 
@@ -138,15 +133,16 @@ const ElegirPlan = () => {
                     Tarjeta de Crédito
                   </Button>
                 </a>
-                <Button 
-                  variant="goldOutline" 
-                  size="lg" 
-                  className="w-full"
-                  onClick={() => handleTransferClick(plan)}
-                >
-                  <Building className="w-4 h-4" />
-                  Pagar por Transferencia
-                </Button>
+                <a href={plan.transferFormLink} target="_blank" rel="noopener noreferrer">
+                  <Button 
+                    variant="goldOutline" 
+                    size="lg" 
+                    className="w-full"
+                  >
+                    <Building className="w-4 h-4" />
+                    Pagar por Transferencia
+                  </Button>
+                </a>
               </div>
             </div>
           ))}
@@ -177,13 +173,6 @@ const ElegirPlan = () => {
       <div className="mt-20">
         <Footer />
       </div>
-
-      {/* Transfer Modal */}
-      <TransferModal 
-        isOpen={modalOpen} 
-        onClose={() => setModalOpen(false)} 
-        plan={selectedPlan}
-      />
     </main>
   );
 };
