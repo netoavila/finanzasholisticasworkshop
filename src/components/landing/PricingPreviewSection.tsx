@@ -7,35 +7,36 @@ const PricingPreviewSection = () => {
     {
       name: "Esencial",
       price: "$800 MXN",
+      description: "Incluye:",
       features: [
-        "Workshop en vivo (6 horas)",
-        "Test para Descubrir tu Arquetipo Financiero",
+        "Workshop 2 días / 3 horas x día (en vivo online por Zoom)",
+        "Test Arquetipos Financieros Dominantes + resultado general",
         "Workbook descargable",
-        "Acceso a grabación por 7 días"
+        "7 días de repetición (replay)",
       ],
       featured: false,
     },
     {
       name: "Expansión",
       price: "$1,680 MXN",
+      description: "Todo lo de Esencial, más:",
       features: [
-        "Todo lo de \"Esencial\" +",
-        "30 días de Comunidad con los facilitadores",
-        "Grabación workshop de por vida",
-        "Guías de instrumentos financieros (PDF)",
-        "Audioguía para reforzar conceptos"
+        "Comunidad WhatsApp con acceso directo a facilitadores x 30 días",
+        "Acceso a la grabación de por vida (descargable)",
+        "Guías rápidas PDF: \"RLR en 1 hoja\" + \"Escalera del Inversionista\"",
+        "Audioguía para reprogramar creencias limitantes",
       ],
       featured: true,
     },
     {
       name: "Transformación",
       price: "$3,360 MXN",
+      description: "Todo lo de Expansión, más:",
       features: [
-        "Todo lo de \"Expansión\" +",
-        "Sesión grupal de profundización",
-        "Análisis detallado de tu arquetipo financiero",
-        "Descuento para futuros eventos",
-        "Entra al sorteo: sesión 1:1 con facilitadores"
+        "Sesión extra (grupo pequeño máximo 5 personas) con micrófono abierto",
+        "Resultado y análisis ampliado del Test de arquetipos (incluye mapa personalizado de instrumentos)",
+        "Monto total descontable al Retiro Boutique \"Finanzas Holísticas\" en Tepoztlán",
+        "Sorteo de una sesión 1:1 para seguimiento personalizado",
       ],
       featured: false,
     },
@@ -68,15 +69,18 @@ const PricingPreviewSection = () => {
               )}
               
               <h3 className="text-foreground font-serif text-xl mb-2">{plan.name}</h3>
-              <p className="text-gold text-2xl font-serif mb-6">{plan.price}</p>
+              <p className="text-gold text-2xl font-serif mb-4">{plan.price}</p>
               
-              <div className="space-y-3">
-                {plan.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-center gap-2 text-sm">
-                    <Check className="w-4 h-4 text-gold" />
-                    <span className="text-text-secondary">{feature}</span>
-                  </div>
-                ))}
+              <div className="border-t border-border pt-4 mb-6">
+                <p className="text-text-muted text-sm mb-4">{plan.description}</p>
+                <div className="space-y-3">
+                  {plan.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-start gap-2 text-sm">
+                      <Check className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
+                      <span className="text-text-secondary">{feature}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
