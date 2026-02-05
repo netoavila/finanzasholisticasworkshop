@@ -19,14 +19,14 @@ const plans: Plan[] = [
   {
     id: "esencial",
     name: "Esencial",
-    price: "$800 MXN",
+    price: "$800 MXN / $45 US",
     priceNumber: 800,
     description: "Incluye:",
     features: [
       "Workshop 2 días / 3 horas x día (en vivo online por Zoom)",
       "Test Arquetipos Financieros Dominantes + resultado general",
       "Workbook descargable",
-      "7 días de repetición (replay)",
+      "Acceso a la grabación por 7 días",
     ],
     featured: false,
     transferFormLink: "https://forms.gle/A5iYb2gKPqSLYAA56",
@@ -35,7 +35,7 @@ const plans: Plan[] = [
   {
     id: "expansion",
     name: "Expansión",
-    price: "$1,680 MXN",
+    price: "$1,680 MXN / $95 US",
     priceNumber: 1680,
     description: "Todo lo de Esencial, más:",
     features: [
@@ -51,7 +51,7 @@ const plans: Plan[] = [
   {
     id: "transformacion",
     name: "Transformación",
-    price: "$3,360 MXN",
+    price: "$3,360 MXN / $189 US",
     priceNumber: 3360,
     description: "Todo lo de Expansión, más:",
     features: [

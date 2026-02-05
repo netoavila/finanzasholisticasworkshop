@@ -6,19 +6,19 @@ const PricingPreviewSection = () => {
   const plans = [
     {
       name: "Esencial",
-      price: "$800 MXN",
+      price: "$800 MXN / $45 US",
       description: "Incluye:",
       features: [
         "Workshop 2 días / 3 horas x día (en vivo online por Zoom)",
         "Test Arquetipos Financieros Dominantes + resultado general",
         "Workbook descargable",
-        "7 días de repetición (replay)",
+        "Acceso a la grabación por 7 días",
       ],
       featured: false,
     },
     {
       name: "Expansión",
-      price: "$1,680 MXN",
+      price: "$1,680 MXN / $95 US",
       description: "Todo lo de Esencial, más:",
       features: [
         "Comunidad WhatsApp con acceso directo a facilitadores x 30 días",
@@ -30,7 +30,7 @@ const PricingPreviewSection = () => {
     },
     {
       name: "Transformación",
-      price: "$3,360 MXN",
+      price: "$3,360 MXN / $189 US",
       description: "Todo lo de Expansión, más:",
       features: [
         "Sesión extra (grupo pequeño máximo 5 personas) con micrófono abierto",
